@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  width: 15px 0px;
+}
+
+body {
+  font-family: "Sofia", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 200px 200px 200px 100px;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  color: rgb(4, 251, 37);
+}
+header h1 {
+  opacity: 0.5;
+}
+.fa-book-reader {
+  color: rgba(255, 0, 0, 0.89);
+  padding: 10px;
+}
+
+ul {
+  margin-left: 300px;
+}
+ul a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font: 1rem sans-serif;
+}
+button {
+  padding: 10px;
+  margin: 10px;
+  width: 125px;
+  border: none;
+  border-radius: 1rem;
+}
+button:hover {
+  background-color: rgba(39, 121, 197, 0.89);
+}
+aside {
+  background-color: green;
+  grid-column: 4/-1;
+  grid-row: 2/5;
+}
+article {
+  background-color: hotpink;
+  grid-column: 1/-2;
+  grid-row: 2/5;
+}
+footer {
+  background-color: khaki;
+  grid-column: 1/-1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 100px auto auto auto 100px;
+  }
+  header,
+  aside,
+  article,
+  footer {
+    grid-column-start: span 1;
+  }
+}
